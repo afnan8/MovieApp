@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520063BA222C293C004B8104 /* MyMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 520063B9222C293C004B8104 /* MyMovieModel.m */; };
+		520063BD222C3BD0004B8104 /* MyMoviesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520063BC222C3BD0004B8104 /* MyMoviesView.m */; };
+		520063C1222C3C0A004B8104 /* ListMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520063C0222C3C0A004B8104 /* ListMovieView.m */; };
 		525F15B8222AB5CE00C8A66F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 525F15B7222AB5CE00C8A66F /* Assets.xcassets */; };
 		525F15BB222AB5CE00C8A66F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525F15B9222AB5CE00C8A66F /* LaunchScreen.storyboard */; };
 		525F15BE222AB5CE00C8A66F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F15BD222AB5CE00C8A66F /* main.m */; };
@@ -43,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520063B8222C293C004B8104 /* MyMovieModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMovieModel.h; sourceTree = "<group>"; };
+		520063B9222C293C004B8104 /* MyMovieModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMovieModel.m; sourceTree = "<group>"; };
+		520063BB222C3BD0004B8104 /* MyMoviesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMoviesView.h; sourceTree = "<group>"; };
+		520063BC222C3BD0004B8104 /* MyMoviesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMoviesView.m; sourceTree = "<group>"; };
+		520063BF222C3C0A004B8104 /* ListMovieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListMovieView.h; sourceTree = "<group>"; };
+		520063C0222C3C0A004B8104 /* ListMovieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListMovieView.m; sourceTree = "<group>"; };
 		525F15AB222AB5CD00C8A66F /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525F15B7222AB5CE00C8A66F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		525F15BA222AB5CE00C8A66F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,6 +114,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520063B7222C2924004B8104 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				520063B8222C293C004B8104 /* MyMovieModel.h */,
+				520063B9222C293C004B8104 /* MyMovieModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		520063BE222C3BEF004B8104 /* ListMovie */ = {
+			isa = PBXGroup;
+			children = (
+				520063C2222C41D9004B8104 /* ListMovieCell */,
+				525F15E6222AB6BE00C8A66F /* AllMovies */,
+				525F15E9222AB6DD00C8A66F /* MyMovies */,
+				520063BF222C3C0A004B8104 /* ListMovieView.h */,
+				520063C0222C3C0A004B8104 /* ListMovieView.m */,
+			);
+			path = ListMovie;
+			sourceTree = "<group>";
+		};
+		520063C2222C41D9004B8104 /* ListMovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				525F15F6222AB81B00C8A66F /* AllMoviesCollectionViewCell.h */,
+				525F15F1222AB80D00C8A66F /* AllMoviesCollectionViewCell.m */,
+			);
+			path = ListMovieCell;
+			sourceTree = "<group>";
+		};
 		525F15A2222AB5CC00C8A66F = {
 			isa = PBXGroup;
 			children = (
@@ -128,15 +167,14 @@
 		525F15AD222AB5CD00C8A66F /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				525F15E0222AB65600C8A66F /* AppDelegate */,
 				525F15EA222AB6ED00C8A66F /* MainViewController */,
-				525F15E9222AB6DD00C8A66F /* MyMovies */,
+				520063BE222C3BEF004B8104 /* ListMovie */,
 				525F15E8222AB6D000C8A66F /* AddMovie */,
-				525F15E6222AB6BE00C8A66F /* AllMovies */,
 				525F15E5222AB6B200C8A66F /* SegmentControl */,
 				525F15E4222AB6AA00C8A66F /* Extensions */,
 				525F15E3222AB69E00C8A66F /* Utilities */,
 				525F15E1222AB66300C8A66F /* Service */,
-				525F15E0222AB65600C8A66F /* AppDelegate */,
 				525F15B7222AB5CE00C8A66F /* Assets.xcassets */,
 				525F15B9222AB5CE00C8A66F /* LaunchScreen.storyboard */,
 				525F15BC222AB5CE00C8A66F /* Info.plist */,
@@ -213,8 +251,6 @@
 		525F15E6222AB6BE00C8A66F /* AllMovies */ = {
 			isa = PBXGroup;
 			children = (
-				525F15F6222AB81B00C8A66F /* AllMoviesCollectionViewCell.h */,
-				525F15F1222AB80D00C8A66F /* AllMoviesCollectionViewCell.m */,
 				525F15F3222AB80D00C8A66F /* AllMoviesView.h */,
 				525F15F2222AB80D00C8A66F /* AllMoviesView.m */,
 				525F15E7222AB6CA00C8A66F /* Model */,
@@ -236,6 +272,7 @@
 		525F15E8222AB6D000C8A66F /* AddMovie */ = {
 			isa = PBXGroup;
 			children = (
+				520063B7222C2924004B8104 /* Model */,
 				525F160B222ABDB500C8A66F /* AddMovieViewController.h */,
 				525F160C222ABDB500C8A66F /* AddMovieViewController.m */,
 			);
@@ -245,6 +282,8 @@
 		525F15E9222AB6DD00C8A66F /* MyMovies */ = {
 			isa = PBXGroup;
 			children = (
+				520063BB222C3BD0004B8104 /* MyMoviesView.h */,
+				520063BC222C3BD0004B8104 /* MyMoviesView.m */,
 			);
 			path = MyMovies;
 			sourceTree = "<group>";
@@ -390,10 +429,13 @@
 				525F160A222AB87900C8A66F /* AppDelegate.m in Sources */,
 				525F15BE222AB5CE00C8A66F /* main.m in Sources */,
 				525F15FC222AB82A00C8A66F /* MoviesModel.m in Sources */,
+				520063BA222C293C004B8104 /* MyMovieModel.m in Sources */,
 				525F160D222ABDB500C8A66F /* AddMovieViewController.m in Sources */,
+				520063BD222C3BD0004B8104 /* MyMoviesView.m in Sources */,
 				525F15F5222AB80D00C8A66F /* AllMoviesView.m in Sources */,
 				525F1604222AB86000C8A66F /* AppAlertController.m in Sources */,
 				525F15F0222AB74000C8A66F /* SegmentedControl.m in Sources */,
+				520063C1222C3C0A004B8104 /* ListMovieView.m in Sources */,
 				525F1607222AB86B00C8A66F /* NetworkingManager.m in Sources */,
 				525F15FF222AB85500C8A66F /* UIImageView+UIImageView_MoviesApp.m in Sources */,
 				525F15ED222AB70B00C8A66F /* MainViewController.m in Sources */,

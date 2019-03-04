@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "AddMovieViewController.h"
+#import "AllMoviesView.h"
+#import "MyMoviesView.h"
 
 @interface MainViewController ()
 
@@ -17,21 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _movieView = [[AllMoviesView alloc] init];
-    
-    
+
     UIBarButtonItem *addMovie = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd  target:self action:@selector(addMovie)];
     self.navigationItem.rightBarButtonItem = addMovie;
-    _didSetupConstraints= NO;
     self.view.backgroundColor = [UIColor appColor];
+    _didSetupConstraints= NO;
     [self setupSegmentControl];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: YES];
     [self setCurrentView];
+
 }
 
 -(void) addMovie {
     AddMovieViewController* vc = [[AddMovieViewController alloc] init];
     [self.navigationController pushViewController: vc animated: YES];
-
 }
 
 -(void) setupSegmentControl {
@@ -52,21 +56,21 @@
 }
 
 -(void) setCurrentView {
-    [[_segmentedControl.subviews objectAtIndex:0] setTintColor:[UIColor appColor]];
     
     [_contentView removeFromSuperview];
+
+    [[_segmentedControl.subviews objectAtIndex:0] setTintColor:[UIColor appColor]];
     if (_segmentedControl.selectedSegmentIndex == 0) {
-        _contentView = _movieView;
         [[_segmentedControl.subviews objectAtIndex:1] setTintColor: [UIColor lightColor]];
         self.title = @"All Movies";
+        _contentView = [[AllMoviesView alloc] init];
     } else if (_segmentedControl.selectedSegmentIndex == 1) {
-        _contentView = [[UIView alloc] init];
-        _contentView.backgroundColor = UIColor.greenColor;
         [[_segmentedControl.subviews objectAtIndex:0] setTintColor: [UIColor lightColor]];
         self.title = @"My Movies";
+        _contentView = [[MyMoviesView alloc] init];
     }
     _didSetupConstraints = NO;
-    [self.view  addSubview: _contentView];
+    [self.view addSubview: _contentView];
     [_contentView setTranslatesAutoresizingMaskIntoConstraints: NO];
     [self.view setNeedsUpdateConstraints];
 }

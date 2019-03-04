@@ -2,7 +2,7 @@
 //  MovieAppUITests.m
 //  MovieAppUITests
 //
-//  Created by afnan on 3/2/19.
+//  Created by afnan on 2/28/19.
 //  Copyright © 2019 macbook pro. All rights reserved.
 //
 
