@@ -36,6 +36,7 @@
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier: _footerIdentifier];
 }
 
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -76,6 +77,25 @@
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
     return CGSizeMake(collectionView.bounds.size.width, 40);
+}
+
+-(void) addNoMovieLabel {
+    self.noMovieLabel = [[UILabel alloc] init];
+    self.noMovieLabel.text = @"No Movie Available";
+    self.noMovieLabel.textColor = UIColor.appTextColor;
+    self.noMovieLabel.font = [UIFont boldSystemFontOfSize: 20];
+    self.noMovieLabel.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:self.noMovieLabel];
+    [self.noMovieLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.noMovieLabel.leadingAnchor constraintEqualToAnchor: self.leadingAnchor].active = YES;
+    [self.noMovieLabel.trailingAnchor constraintEqualToAnchor: self.trailingAnchor].active = YES;
+    [self.noMovieLabel.topAnchor constraintEqualToAnchor: self.topAnchor].active = YES;
+    [self.noMovieLabel.bottomAnchor constraintEqualToAnchor: self.bottomAnchor].active = YES;
+}
+
+
+-(void) removeMovieLabel {
+    [self.noMovieLabel removeFromSuperview];
 }
 
 @end

@@ -16,7 +16,6 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
         sharedInstance.myMovies = [[NSMutableArray alloc] init];
-
     });
     return sharedInstance;
 }
@@ -25,10 +24,19 @@
     self = [super init];
     if (self) {
         [self initCollectionView];
-        [self.collectionView reloadData];
-
+//        [self.collectionView reloadData];
     }
     return self;
+}
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    if ([MyMoviesView sharedInstance].myMovies.count > 0) {
+        [self removeMovieLabel];
+        [self.collectionView setHidden:NO];
+    } else {
+        [self addNoMovieLabel];
+        [self.collectionView setHidden:YES];
+    }
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
