@@ -26,6 +26,11 @@
 		525F1607222AB86B00C8A66F /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F1606222AB86B00C8A66F /* NetworkingManager.m */; };
 		525F160A222AB87900C8A66F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F1609222AB87900C8A66F /* AppDelegate.m */; };
 		525F160D222ABDB500C8A66F /* AddMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F160C222ABDB500C8A66F /* AddMovieViewController.m */; };
+		52DBF153222DB66B00EBC5EC /* NetworkManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DBF150222DB61700EBC5EC /* NetworkManagerTests.m */; };
+		52DBF155222DC53900EBC5EC /* AppAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DBF154222DC53900EBC5EC /* AppAlertControllerTests.m */; };
+		52DBF157222DCAA800EBC5EC /* AddMovieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DBF156222DCAA800EBC5EC /* AddMovieTests.m */; };
+		52DBF159222E6B5B00EBC5EC /* AllMoviesViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DBF158222E6B5B00EBC5EC /* AllMoviesViewTests.m */; };
+		52DBF161222E85C800EBC5EC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DBF15F222E85C800EBC5EC /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,12 @@
 		525F1609222AB87900C8A66F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		525F160B222ABDB500C8A66F /* AddMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMovieViewController.h; sourceTree = "<group>"; };
 		525F160C222ABDB500C8A66F /* AddMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMovieViewController.m; sourceTree = "<group>"; };
+		52DBF150222DB61700EBC5EC /* NetworkManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTests.m; sourceTree = "<group>"; };
+		52DBF154222DC53900EBC5EC /* AppAlertControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppAlertControllerTests.m; sourceTree = "<group>"; };
+		52DBF156222DCAA800EBC5EC /* AddMovieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMovieTests.m; sourceTree = "<group>"; };
+		52DBF158222E6B5B00EBC5EC /* AllMoviesViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllMoviesViewTests.m; sourceTree = "<group>"; };
+		52DBF15F222E85C800EBC5EC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		52DBF160222E85C800EBC5EC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,13 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				525F15E0222AB65600C8A66F /* AppDelegate */,
-				525F15EA222AB6ED00C8A66F /* MainViewController */,
-				520063BE222C3BEF004B8104 /* ListMovie */,
-				525F15E8222AB6D000C8A66F /* AddMovie */,
-				525F15E5222AB6B200C8A66F /* SegmentControl */,
+				52DBF162222E8C0200EBC5EC /* UI */,
 				525F15E4222AB6AA00C8A66F /* Extensions */,
 				525F15E3222AB69E00C8A66F /* Utilities */,
-				525F15E1222AB66300C8A66F /* Service */,
+				52DBF15D222E851500EBC5EC /* Networking */,
 				525F15B7222AB5CE00C8A66F /* Assets.xcassets */,
 				525F15B9222AB5CE00C8A66F /* LaunchScreen.storyboard */,
 				525F15BC222AB5CE00C8A66F /* Info.plist */,
@@ -186,6 +194,10 @@
 		525F15C6222AB5CE00C8A66F /* MovieAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				52DBF158222E6B5B00EBC5EC /* AllMoviesViewTests.m */,
+				52DBF156222DCAA800EBC5EC /* AddMovieTests.m */,
+				52DBF154222DC53900EBC5EC /* AppAlertControllerTests.m */,
+				52DBF150222DB61700EBC5EC /* NetworkManagerTests.m */,
 				525F15C7222AB5CE00C8A66F /* MovieAppTests.m */,
 				525F15C9222AB5CE00C8A66F /* Info.plist */,
 			);
@@ -222,8 +234,8 @@
 		525F15E3222AB69E00C8A66F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				525F1602222AB86000C8A66F /* AppAlertController.h */,
-				525F1600222AB86000C8A66F /* AppAlertController.m */,
+				525F15E5222AB6B200C8A66F /* SegmentControl */,
+				52DBF166222E8C5600EBC5EC /* AppAlert */,
 				525F1601222AB86000C8A66F /* AppColors.h */,
 				525F1603222AB86000C8A66F /* Globals.h */,
 			);
@@ -295,6 +307,59 @@
 				525F15EC222AB70B00C8A66F /* MainViewController.m */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		52DBF15D222E851500EBC5EC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				52DBF15E222E852600EBC5EC /* Reachability */,
+				525F15E1222AB66300C8A66F /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		52DBF15E222E852600EBC5EC /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				52DBF160222E85C800EBC5EC /* Reachability.h */,
+				52DBF15F222E85C800EBC5EC /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		52DBF162222E8C0200EBC5EC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				52DBF163222E8C1700EBC5EC /* Controller */,
+				52DBF164222E8C2800EBC5EC /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		52DBF163222E8C1700EBC5EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				525F15EA222AB6ED00C8A66F /* MainViewController */,
+				525F15E8222AB6D000C8A66F /* AddMovie */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52DBF164222E8C2800EBC5EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				520063BE222C3BEF004B8104 /* ListMovie */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52DBF166222E8C5600EBC5EC /* AppAlert */ = {
+			isa = PBXGroup;
+			children = (
+				525F1602222AB86000C8A66F /* AppAlertController.h */,
+				525F1600222AB86000C8A66F /* AppAlertController.m */,
+			);
+			path = AppAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +501,7 @@
 				525F1604222AB86000C8A66F /* AppAlertController.m in Sources */,
 				525F15F0222AB74000C8A66F /* SegmentedControl.m in Sources */,
 				520063C1222C3C0A004B8104 /* ListMovieView.m in Sources */,
+				52DBF161222E85C800EBC5EC /* Reachability.m in Sources */,
 				525F1607222AB86B00C8A66F /* NetworkingManager.m in Sources */,
 				525F15FF222AB85500C8A66F /* UIImageView+UIImageView_MoviesApp.m in Sources */,
 				525F15ED222AB70B00C8A66F /* MainViewController.m in Sources */,
@@ -448,6 +514,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DBF153222DB66B00EBC5EC /* NetworkManagerTests.m in Sources */,
+				52DBF155222DC53900EBC5EC /* AppAlertControllerTests.m in Sources */,
+				52DBF157222DCAA800EBC5EC /* AddMovieTests.m in Sources */,
+				52DBF159222E6B5B00EBC5EC /* AllMoviesViewTests.m in Sources */,
 				525F15C8222AB5CE00C8A66F /* MovieAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
